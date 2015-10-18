@@ -53,4 +53,12 @@
         width: 35px;
         height: 35px;
     }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .section-text {
+        font-size: 17px;
+    }
 }
