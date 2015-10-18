@@ -25,6 +25,8 @@
     position: absolute;
     bottom: 0;
 
+    cursor: pointer;
+
     display: block;
 
     width: 100%;
