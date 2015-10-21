@@ -53,13 +53,9 @@ header
 .svg-redesignText
 {
     position: absolute;
-    bottom: 22%;
-
+    bottom: 12%;
     display: block;
-
     width: 100%;
-
-    border: none;
-
-    fill: rgba(219, 219, 219, .71);
+    fill: #b2dfdb;
+    opacity: 0.5;
 }
