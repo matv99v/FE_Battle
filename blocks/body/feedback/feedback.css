@@ -1,11 +1,11 @@
 .feedback{
     padding: 0 50px 50px 50px;
-    background-color: rgb(243, 243, 243);
+    /*background-color: rgb(243, 243, 243);*/
 }
 
-.carousel-header{
+.carousel-main-container{
     background-color: rgb(243, 243, 243);
-    padding: 15px 0;
+
 }
 
 .quoted-text{
@@ -15,6 +15,7 @@
 .feedback svg {
     fill: #b2dfdb;
 }
+
 
 .carousel-indicators li {
     border-color: #b2dfdb;
@@ -32,3 +33,13 @@
     padding: 20px 0;
 }
 
+.feedback .carousel-control {
+    width: 6%;
+    background: none;
+    bottom: 33%;
+}
+
+.carousel-indicators > li, .carousel-indicators > li.active{
+    margin: 0 6px;
+    vertical-align: middle;
+}
