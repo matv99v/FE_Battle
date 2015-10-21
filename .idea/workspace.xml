@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43691aaa-afd6-4165-a6a9-01550c223b2e" name="Default" comment="updated feedback v2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks/body/feedback/feedback.css" afterPath="$PROJECT_DIR$/blocks/body/feedback/feedback.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/feedback-person.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/feedback-person2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/feedback-person3.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="FE_Battle.iws" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43448275">
-              <caret line="317" column="22" selection-start-line="317" selection-start-column="22" selection-end-line="317" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.31034482">
+              <caret line="355" column="65" selection-start-line="355" selection-start-column="65" selection-end-line="355" selection-end-column="65" />
               <folding>
                 <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -84,8 +85,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blocks/body/feedback/feedback.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -97,7 +98,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
+    <option name="x" value="-1317" />
     <option name="y" value="-771" />
     <option name="width" value="1317" />
     <option name="height" value="771" />
@@ -509,7 +510,7 @@
       <workItem from="1445426053748" duration="17000" />
       <workItem from="1445426170006" duration="88000" />
       <workItem from="1445426302685" duration="6148000" />
-      <workItem from="1445448662754" duration="694000" />
+      <workItem from="1445448662754" duration="3440000" />
     </task>
     <task id="LOCAL-00001" summary="added feedback">
       <created>1445382370546</created>
@@ -527,10 +528,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26822000" />
+    <option name="totallyTimeSpent" value="29568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="-771" width="1317" height="771" extended-state="6" />
+    <frame x="-1317" y="-771" width="1317" height="771" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -763,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43448275">
-          <caret line="317" column="22" selection-start-line="317" selection-start-column="22" selection-end-line="317" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.31034482">
+          <caret line="355" column="65" selection-start-line="355" selection-start-column="65" selection-end-line="355" selection-end-column="65" />
           <folding>
             <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
