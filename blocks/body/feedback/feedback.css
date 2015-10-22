@@ -43,3 +43,7 @@
     margin: 0 6px;
     vertical-align: middle;
 }
+
+.wrapper{
+    display: inline-block;
+}
