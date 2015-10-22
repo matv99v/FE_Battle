@@ -25,6 +25,7 @@ header
 
     color: #fff;
     background-size: cover;
+    position: relative;
 }
 
 .video__case
@@ -53,7 +54,7 @@ header
 .svg-redesignText
 {
     position: absolute;
-    bottom: 12%;
+    bottom: 27%;
     display: block;
     width: 100%;
     fill: #b2dfdb;

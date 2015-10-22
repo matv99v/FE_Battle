@@ -62,3 +62,9 @@
         font-size: 17px;
     }
 }
+
+@media (min-width: 1200px) {
+img.carousel-item {
+    float: right;
+}
+}
