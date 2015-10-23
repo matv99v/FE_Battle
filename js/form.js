@@ -53,14 +53,16 @@ function getRegistrationFormData() {
 function validaRegistrationData(formData) {
     var validationRules = {
         name: function(value) {
-            var hasOnlyLetters = /([A-Za-z])+/g;
+            var name = /[^a-zà-ÿ³¿º´'\s]+/gi;
+
             if (!value) {
-                return 'Please enter your name.';
+                return 'Name is required';
             }
 
-            if (value !== hasOnlyLetters) {
-                return 'Name must have only letters';
-            };
+            if (name.test(value) ) {
+
+                return 'Should contain only letters latin/cyrillic !';
+            }
         },
         email: function(value) {
             var encorrectEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -74,13 +76,45 @@ function validaRegistrationData(formData) {
             };
         },
         phone: function(value) {
-            var correctNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
             if (!value) {
                 return 'Please enter your phone number.';
             }
 
-            if (!correctNumber.test(value)) {
-                return 'Incorrect phone number';
+            function extractNum(arg){
+                var newArr = [];
+                for (var ind in arg.split('')){
+                    if (/([0-9])+/.test(arg[ind])){
+                        newArr.push(arg[ind]);
+                    }
+                }
+                return newArr.join('').length;
+            }
+
+            function isInputOk(inArr){
+                var validChars = ' +-()0123456789'.split('');
+
+                for (var i in inArr){
+                    var flag = false,
+                        mainFlag = true;
+
+                    for (var j in validChars){
+                        if (inArr[i].indexOf(validChars[j]) >= 0){
+                            flag = true;
+                        }
+                    }
+
+                    mainFlag = mainFlag && flag;
+
+                    if (!mainFlag){
+                        return mainFlag;
+                    }
+                }
+                return true;
+            }
+
+            if (!(isInputOk(value) && (extractNum(value)== 12)) ) {
+                console.log('true');
+                return 'Incorrect phone format';
             }
         },
         message: function(value) {
