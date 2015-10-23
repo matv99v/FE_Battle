@@ -1,8 +1,3 @@
-.feedback{
-    padding: 0 50px 50px 50px;
-    /*background-color: rgb(243, 243, 243);*/
-}
-
 .carousel-main-container{
     background-color: rgb(243, 243, 243);
 
@@ -25,19 +20,12 @@
     background-color: #b2dfdb;
 }
 
-.person-name {
-    color: #b2dfdb;
-    font-weight: bold;
-}
+
 .feedback-header{
     padding: 20px 0;
 }
 
-.feedback .carousel-control {
-    width: 6%;
-    background: none;
-    bottom: 33%;
-}
+
 
 .carousel-indicators > li, .carousel-indicators > li.active{
     margin: 0 6px;
@@ -46,4 +34,26 @@
 
 .wrapper{
     display: inline-block;
+}
+
+
+/*<------------------------->*/
+.new-feedback.row{
+    background-color: rgb(243, 243, 243);
+    padding: 0;
+
+}
+
+.client-say{
+    padding: 0 30px 55px 30px;
+}
+
+.person-name {
+    color: #b2dfdb;
+    font-weight: bold;
+}
+
+.new-feedback .carousel-control {
+    width: 6%;
+    background: none;
 }
