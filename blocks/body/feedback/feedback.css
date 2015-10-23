@@ -36,3 +36,7 @@
 .carousel-header{
     padding: 30px 0 10px 0;
 }
+
+.carousel-control.right {
+    right: -10px;
+}
