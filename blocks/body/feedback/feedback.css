@@ -14,7 +14,8 @@
 .new-feedback.row{
     background-color: rgb(243, 243, 243);
     padding: 0;
-
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .client-say{
