@@ -16,11 +16,6 @@
         padding-top: 150px;
     }
 
-    .svg-redesignText
-    {
-        top: 200px;
-    }
-
     .section__video
     {
         height: 466px;
@@ -60,5 +55,18 @@
 
     .section-text {
         font-size: 17px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .new-feedback img {
+        float: right;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .svg-redesignText {
+        width: 100%;
     }
 }
