@@ -65,3 +65,8 @@
     }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .svg-redesignText {
+        width: 100%;
+    }
+}
