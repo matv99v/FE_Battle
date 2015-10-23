@@ -1,17 +1,3 @@
-.carousel-main-container{
-    background-color: rgb(243, 243, 243);
-
-}
-
-.quoted-text{
-    margin: 0;
-}
-
-.feedback svg {
-    fill: #b2dfdb;
-}
-
-
 .carousel-indicators li {
     border-color: #b2dfdb;
 }
@@ -20,24 +6,11 @@
     background-color: #b2dfdb;
 }
 
-
-.feedback-header{
-    padding: 20px 0;
-}
-
-
-
 .carousel-indicators > li, .carousel-indicators > li.active{
     margin: 0 6px;
     vertical-align: middle;
 }
 
-.wrapper{
-    display: inline-block;
-}
-
-
-/*<------------------------->*/
 .new-feedback.row{
     background-color: rgb(243, 243, 243);
     padding: 0;
@@ -56,4 +29,5 @@
 .new-feedback .carousel-control {
     width: 6%;
     background: none;
+    bottom: 30%;
 }

@@ -11,7 +11,7 @@
 
     <!-- Bootstrap -->
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="blocks/body/header/header.css"/>
@@ -350,7 +350,6 @@
         </div>
     </section>
 
-
     <section id="contact">
 
             <div class="container">
@@ -397,7 +396,7 @@
 
 
 
-                                    <button type="submit" id='submit' class="btn btn-primary btn-lg col-xs-12 form-button audioHover audioClick">Send</button>
+                                    <button type="submit" id='submit' class="btn btn-primary btn-lg col-xs-12 form-button  Click">Send</button>
 
                                 </div>
                             </div>
@@ -464,23 +463,6 @@
     <script src="js/material_init.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-    <!-- Audio and EasyAudioEffects.js -->
-    <script src="js/jquery.easyaudioeffects.1.0.0.min.js"></script>
-
-    <script>
-        $('.audioHover').easyAudioEffects({
-            ogg : "media/hover.ogg",
-            mp3 : "media/hover.mp3",
-            eventType : "hover"
-        });
-
-        $('.audioClick').easyAudioEffects({
-            ogg : "media/click1.ogg",
-            mp3 : "media/click1.mp3",
-            eventType : "click"
-        });
-    </script>
-
 
     <audio class="audioPlayer" controls loop autoplay style="display: none">
         <source src="media/music_cut.mp3" type="audio/mpeg">
