@@ -11,8 +11,18 @@ function init() {
     $('#contactForm').submit(function(event) {
         processRegistration(this);
         event.preventDefault();
+        clearErrorsParagraph();
     });
 }
+/*@function clear text in <p> tag with class "error message"
+* to preserve hint and error message be showed together
+* author Pankov A.A.
+*/
+function clearErrorsParagraph() {
+    $('#contactForm input, #contactForm textarea').focus(function(){        
+        $( this ).parent().next().text("");        
+    });
+};
 
 function processRegistration(form) {
     var data = getRegistrationFormData();

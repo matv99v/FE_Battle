@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="blocks/body/body.css"/>
     <link rel="stylesheet" href="blocks/body/our-team/ourteam.css"/>
     <link rel="stylesheet" href="blocks/body/feedback/feedback.css"/>
-
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css"/>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -351,7 +352,13 @@
         </div>
     </section>
 
+<<<<<<< HEAD
     <section id="contact">
+=======
+
+
+        <section id="contact">
+>>>>>>> gh-pages
             <div class="container">
 
                 <div class="row">
@@ -364,36 +371,40 @@
                         <form name="sentMessage" id="contactForm">
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control change_opacity" placeholder="Name" id="name">
+                                    <label class="floating-label">Name</label>
+                                    <input type="text" class="form-control change_opacity" placeholder="Name" data-hint="Please, enter your name here" id="name">
                                     <p class="help-block error-message" data-error-for='name'></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Email Address</label>
-                                    <input type="text" class="form-control change_opacity" placeholder="user@example.com" id="email" >
+                                    <input type="text" class="form-control change_opacity" data-hint="A valid email should contain an @ symbol" placeholder="user@example.com" id="email" >
                                     <p class="help-block error-message" data-error-for='email'></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Phone Number</label>
-                                    <input type="text" class="form-control change_opacity" placeholder="+380XXXXXXXXX" id="phone" >
+                                    <input type="text" class="form-control change_opacity " data-hint="Enter only numbers" placeholder="+380XXXXXXXXX" id="phone" >
                                     <p class="help-block error-message" data-error-for='phone'></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Message</label>
-                                    <textarea rows="5" class="form-control change_opacity" placeholder="Message" id="message"></textarea>
+                                    <textarea rows="5" class="form-control change_opacity" data-hint="Please, write everything you want" placeholder="Message" id="message"></textarea>
                                     <p class="help-block error-message" data-error-for='message'></p>
                                 </div>
                             </div>
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
+<<<<<<< HEAD
                                     <button type="submit" id='submit' class="btn btn-lg col-xs-12 form-button  ">Send</button>
+=======
+                                    <button type="submit" id='submit' class="btn btn-primary btn-lg col-xs-12 form-button audioHover audioClick">Send</button>
+>>>>>>> gh-pages
                                 </div>
                             </div>
                         </form>
@@ -454,6 +465,29 @@
     <script src="js/creative.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.easing.min.js"></script>
+<<<<<<< HEAD
+=======
+    <!--material design -->
+    <script src="js/material_init.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <!-- Audio and EasyAudioEffects.js -->
+    <script src="js/jquery.easyaudioeffects.1.0.0.min.js"></script>
+
+    <script>
+        $('.audioHover').easyAudioEffects({
+            ogg : "media/hover.ogg",
+            mp3 : "media/hover.mp3",
+            eventType : "hover"
+        });
+
+        $('.audioClick').easyAudioEffects({
+            ogg : "media/click1.ogg",
+            mp3 : "media/click1.mp3",
+            eventType : "click"
+        });
+    </script>
+>>>>>>> gh-pages
 
     <audio class="audioPlayer" controls loop autoplay style="display: none">
         <source src="media/music_cut.mp3" type="audio/mpeg">
