@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43691aaa-afd6-4165-a6a9-01550c223b2e" name="Default" comment="updated feedback v2">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blocks/media.css" afterPath="$PROJECT_DIR$/blocks/media.css" />
-    </list>
+    <list default="true" id="43691aaa-afd6-4165-a6a9-01550c223b2e" name="Default" comment="updated feedback v2" />
     <ignored path="FE_Battle.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -108,8 +106,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1317" />
-    <option name="y" value="18" />
+    <option name="x" value="49" />
+    <option name="y" value="-750" />
     <option name="width" value="1317" />
     <option name="height" value="750" />
   </component>
@@ -558,7 +556,7 @@
       <workItem from="1445448662754" duration="13545000" />
       <workItem from="1445505156869" duration="89000" />
       <workItem from="1445518608187" duration="22525000" />
-      <workItem from="1445586672869" duration="3828000" />
+      <workItem from="1445586672869" duration="4448000" />
     </task>
     <task id="LOCAL-00001" summary="added feedback">
       <created>1445382370546</created>
@@ -576,10 +574,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66115000" />
+    <option name="totallyTimeSpent" value="66735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1317" y="18" width="1317" height="750" extended-state="6" />
+    <frame x="49" y="-750" width="1317" height="750" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
