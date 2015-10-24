@@ -7,7 +7,14 @@
 .portfolio__image
 {
     padding: 0;
+
 }
+
+.portfolio__image img {
+    width: 100%;
+    padding: 0;
+}
+
 .portfolio-box-caption
 {
     position: absolute;
@@ -57,3 +64,5 @@
 {
     opacity: .8;
 }
+
+
