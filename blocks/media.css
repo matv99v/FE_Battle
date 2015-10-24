@@ -32,7 +32,9 @@
     {
         height: 466px;
 
-        background-color: #ffc107;
+        background-image: url(../img/bg-photo-mobile-version.png);
+        background-size: cover;
+
     }
 
     .form-control
@@ -55,6 +57,16 @@
 
     .section-text {
         font-size: 17px;
+    }
+
+    .client-say h3  {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .client-say h4{
+        font-size: 18px;
+        text-align: center;
     }
 
 }

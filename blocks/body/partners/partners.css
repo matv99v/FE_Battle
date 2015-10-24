@@ -104,3 +104,7 @@ div.scrollableArea
     -o-user-select: none;
     user-select: none;
 }
+
+.partners__description {
+    text-transform: uppercase;
+}
