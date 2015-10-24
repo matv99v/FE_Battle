@@ -110,7 +110,7 @@ function validaRegistrationData(formData) {
                 return true;
             }
 
-            if (!(isInputOk(value) && (extractNum(value)== 12)) ) {
+            if (!(isInputOk(value) && (extractNum(value)== 20)) ) {
                 console.log('true');
                 return 'Incorrect phone format';
             }
