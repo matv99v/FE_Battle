@@ -69,6 +69,11 @@
         text-align: center;
     }
 
+    #play,
+    #pause {
+        display: none;
+    }
+
 }
 
 @media (min-width: 1200px) {

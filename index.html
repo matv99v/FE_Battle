@@ -28,6 +28,12 @@
     <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css"/>
     <link rel="stylesheet" href="blocks/body/partners/partners.css"/>
 
+    <!-- Стили для всех версий IE -->
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="blocks/style-for-ie.css" />
+    <![endif]-->
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -81,13 +87,13 @@
     <header class="section__video">
 
 
-            <svg class='audio-btn' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 60" version="1.1"  viewbox="0 0 306 60">
+            <svg class='audio-btn' id="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 60" version="1.1"  viewbox="0 0 306 60">
                 <g transform="translate(0,-992.4)">
                     <path d="m0,992.4,0,60,306,0,0-60-306,0zm25.6,14.9c0.6,0,1.3,0,1.9,0.3l20,12.6c1.6,1,1.3,2.1,1.3,2.1s0.3,1.2-1.3,2.1l-20,12.7c-0.6,0.4-1.3,0.3-1.9,0.3-2.2,0-2.2-1.8-2.2-2.2v-25.9c0-0.4,0-2.2,2.2-2.2zm40.2,0.5,14.9,0c3.2,0,5.7,0.8,7.3,2.3,1.6,1.6,2.4,3.8,2.4,6.6,0,2.9-0.9,5.3-2.7,6.9-1.8,1.7-4.5,2.5-8.1,2.5h-4.9v10.8h-9v-29.2zm29.3,0,9,0,0,22,14,0,0,7.2-22.9,0,0-29.2zm35,0,9.8,0,10.9,29.2-9.4,0-1.4-4.8-10.2,0-1.4,4.8-9.2,0,10.9-29.2zm20.6,0,9.9,0,5.8,9.9,5.9-9.9,9.9,0-11.3,17,0,12.2-9,0,0-12.2-11.3-17zm-75.9,5.9,0,6.5,2.2,0c1.7,0,2.9-0.3,3.6-0.9s1-1.4,1-2.3-0.3-1.7-0.9-2.3-1.7-0.9-3.4-0.9h-2.6zm60.1,1.6-3.2,10.5,6.4,0-3.2-10.5z"></path>
                 </g>
             </svg>
 
-            <svg class='audio-btn' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 60" version="1.1" viewbox="0 0 306 60">
+            <svg class='audio-btn btn-hide' id="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 60" version="1.1" viewbox="0 0 306 60">
                 <g transform="translate(0,-992.4)"></g>
                     <g transform="translate(0,-992.4)">
                         <path d="m0,992.4,0,60,306,0,0-60-306,0zm27.5,14.4,4.3,0c1.2,0,2.1,1,2.1,2.2v25.9c0,1.2-0.9,2.2-2.1,2.2h-4.3c-1.2,0-2.2-1-2.2-2.2v-25.9c0-1.2,1-2.2,2.2-2.2zm12.8,0,4.3,0c1.2,0,2.2,1,2.2,2.2v25.9c0,1.2-1,2.2-2.2,2.2h-4.3c-1.2,0-2.2-1-2.2-2.2v-25.9c0-1.2,1-2.2,2.2-2.2zm131.8,0.5c3.7,0,6.5,0.7,8.5,2.1s3.1,3.6,3.5,6.6l-8.4,0.5c-0.2-1.3-0.7-2.3-1.4-2.9s-1.7-0.9-3-0.9c-1,0-1.8,0.2-2.4,0.7-0.5,0.4-0.8,1-0.8,1.6,0,0.5,0.2,0.9,0.7,1.3,0.4,0.4,1.4,0.7,3,1.1,3.9,0.8,6.7,1.7,8.4,2.6s3,2,3.7,3.2c0.8,1.3,1.2,2.7,1.2,4.3,0,1.9-0.5,3.6-1.6,5.2-1,1.6-2.4,2.8-4.3,3.6-1.8,0.8-4.2,1.2-7,1.2-4.9,0-8.4-1-10.3-2.9s-3-4.4-3.2-7.3l8.5-0.5c0.2,1.4,0.6,2.4,1.1,3.2,0.9,1.2,2.3,1.8,4,1.8,1.3,0,2.3-0.3,2.9-0.9,0.7-0.6,1-1.3,1-2.1s-0.3-1.4-1-2-2.2-1.1-4.6-1.7c-3.9-0.9-6.7-2.1-8.4-3.6s-2.5-3.4-2.5-5.6c0-1.5,0.4-2.9,1.3-4.2s2.2-2.4,3.9-3.1c1.7-0.8,4.1-1.2,7.1-1.2zm-106.4,0.5,14.9,0c3.2,0,5.6,0.8,7.3,2.3,1.6,1.6,2.4,3.8,2.4,6.6,0,2.9-0.9,5.3-2.7,6.9-1.8,1.7-4.4,2.5-8,2.5h-4.9v10.8h-9v-29.2zm37.3,0,9.8,0,10.9,29.2-9.4,0-1.4-4.8-10.2,0-1.4,4.8-9.2,0,10.9-29.2zm23.5,0,8.9,0,0,17.8c0,1.6,0.4,2.8,1.3,3.7s2.1,1.3,3.7,1.3c1.5,0,2.8-0.4,3.6-1.3,0.9-0.9,1.3-2.1,1.3-3.7v-17.8h8.9v17.4c0,1.7-0.3,3.4-0.8,4.9s-1.4,2.9-2.5,4-2.3,1.9-3.6,2.4c-1.7,0.7-3.8,1-6.3,1-1.4,0-3-0.1-4.6-0.3-1.7-0.2-3.1-0.6-4.2-1.2s-2.2-1.5-3.1-2.5c-0.9-1.1-1.5-2.2-1.9-3.4-0.6-1.9-0.8-3.5-0.8-4.9v-17.4zm63,0,24,0,0,6.2-15,0,0,4.7,14,0,0,5.9-14,0,0,5.8,15.5,0,0,6.6-24.4,0,0-29.2zm-114.8,5.9,0,6.5,2.2,0c1.7,0,3-0.3,3.7-0.9s1-1.4,1-2.3-0.3-1.7-0.9-2.3-1.7-0.9-3.4-0.9h-2.6zm33.1,1.6-3.2,10.5,6.4,0-3.2-10.5z"></path>
@@ -588,7 +594,7 @@
         </div>
     </footer>
 
-    <audio class="audioPlayer" controls loop autoplay style="display: none">
+    <audio class="audioPlayer" id="myaudio" loop >
         <source src="media/music_cut.mp3" type="audio/mpeg">
     </audio>
 
@@ -636,6 +642,50 @@
             });
         });
 
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+            var audio = document.getElementById("myaudio");
+
+           $('#play').click(function(){
+
+               $(this).toggle('btn-hide');
+               $('#pause').toggle('btn-hide');
+               audio.play();
+
+           })
+
+            $('#pause').click(function(){
+                $(this).toggle('btn-hide');
+                $('#play').toggle('btn-hide');
+                audio.pause();
+            })
+
+        });
+    </script>
+
+    <script>
+        navigator.sayswho= (function(){
+
+            var ua=  navigator.userAgent, tem,
+                    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i) || [];
+            if(/trident/i.test(M[1])){
+                tem=  /\brv[ :]+(\d+(\.\d+)?)/g.exec(ua) || [];
+                return 'IE '+(tem[1] || '');
+            }
+            M= M[2]? [M[1], M[2]]:[navigator.appName, navigator.appVersion, '-?'];
+            if((tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+            return M.join(' ');
+        })();
+
+            console.log(navigator.sayswho);
+        if (navigator.sayswho == 'IE 11.0') {
+            document.querySelector('body').className += ' ie';
+        } else if (navigator.sayswho == 'MSIE 10.0') {
+            document.querySelector('body').className += ' ie';
+        }
     </script>
 
 </body>
