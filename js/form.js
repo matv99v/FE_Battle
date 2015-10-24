@@ -57,9 +57,8 @@ function validaRegistrationData(formData) {
             if (!value) {
                 return 'Name is required';
             }
-            console.log(value.match(name));
 
-             if ( !value.match(/^[a-zа-яiъї]+$/i) ) {
+            if ( !value.match(/^[a-zа-яiъї]+$/i) ) {
                 return 'Should contain only letters latin/cyrillic';
             }
         },
