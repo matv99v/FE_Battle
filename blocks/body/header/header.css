@@ -60,3 +60,20 @@ header
     fill: #b2dfdb;
     opacity: 0.5;
 }
+
+.audio-btn{
+    border-radius: 5px;
+    height: 40px;
+    fill:#b2dfdb;
+    opacity: 0.5;
+    position: relative;
+    top: 20%;
+    margin-left: calc(100% - 42px);
+    transition: margin-left ease-out 0.3s;
+
+}
+
+.audio-btn:hover {
+    margin-left: calc(100% - 150px);
+
+}
