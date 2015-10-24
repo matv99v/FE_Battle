@@ -32,7 +32,8 @@
     {
         height: 466px;
 
-        background-color: #ffc107;
+        background-image: url(../img/bg-photo-mobile-version.png);
+        background-size: cover;
     }
 
     .form-control
@@ -48,19 +49,51 @@
         width: 35px;
         height: 35px;
     }
+    .ie .header__title
+    {
+        font-size: 4em;
+    }
 
-    .section-heading {
+    .ie-redesignText
+    {
+        padding-top: 30%;
+    }
+
+    .section-heading
+    {
         font-size: 30px;
     }
 
-    .section-text {
+    .section-text
+    {
         font-size: 17px;
     }
 
+    .client-say h3
+    {
+        font-size: 21px;
+
+        text-align: center;
+    }
+
+    .client-say h4
+    {
+        font-size: 18px;
+
+        text-align: center;
+    }
+
+    #play,
+    #pause
+    {
+        display: none;
+    }
 }
 
-@media (min-width: 1200px) {
-    .new-feedback img {
+@media (min-width: 1200px)
+{
+    .new-feedback img
+    {
         float: right;
     }
 }

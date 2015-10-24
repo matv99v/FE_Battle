@@ -21,11 +21,12 @@ header
 
 .section__video
 {
+    position: relative;
+
     height: 866px;
 
     color: #fff;
     background-size: cover;
-    position: relative;
 }
 
 .video__case
@@ -55,25 +56,78 @@ header
 {
     position: absolute;
     bottom: 27%;
+
     display: block;
+
     width: 100%;
+
+    opacity: .5;
+
     fill: #b2dfdb;
-    opacity: 0.5;
 }
 
-.audio-btn{
-    border-radius: 5px;
+.ie .svg-redesignText
+{
+    display: none;
+}
+
+.ie-redesignText
+{
+    display: none;
+
+    padding-top: 20%;
+}
+
+.ie .ie-redesignText
+{
+    display: block;
+}
+
+.ie .header__title
+{
+    font-family: Arial;
+    font-size: 8em;
+    font-weight: 700;
+}
+
+.audio-btn
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
     height: 40px;
-    fill:#b2dfdb;
-    opacity: 0.5;
-    position: relative;
-    top: 20%;
-    margin-left: calc(100% - 42px);
-    transition: margin-left ease-out 0.3s;
+    margin-left: -120px;
 
+    cursor: pointer;
+    transition: 1s;
+
+    opacity: .5;
+    border-radius: 5px;
+
+    fill: #b2dfdb;
 }
 
-.audio-btn:hover {
-    margin-left: calc(100% - 150px);
+.ie .audio-btn
+{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
 
+    height: 40px;
+    margin-left: 0;
+
+    cursor: pointer;
+    transition: 1s;
+
+    opacity: .5;
+    border-radius: 5px;
+
+    fill: #b2dfdb;
 }
+
+.btn-hide
+{
+    display: none;
+}
+
