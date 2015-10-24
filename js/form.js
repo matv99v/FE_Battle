@@ -53,12 +53,12 @@ function getRegistrationFormData() {
 function validaRegistrationData(formData) {
     var validationRules = {
         name: function(value) {
-            
+            var name = /[^a-zа-яіїєґ'\s]+/gi;
             if (!value) {
                 return 'Name is required';
             }
 
-            if ( !value.match(/^[a-zа-яiъї]+$/i) ) {
+            if (name.test(value)) {
                 return 'Should contain only letters latin/cyrillic';
             }
         },
