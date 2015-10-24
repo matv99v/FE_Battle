@@ -1,13 +1,17 @@
-.audio-btn{
-    border-radius: 5px;
-    height: 40px;
-    fill:#b2dfdb;
-    opacity: 0.5;
+.audio-btn
+{
     position: absolute;
-    left: 0;
-    margin-left: 0;
     bottom: 20px;
-    transition: 1s;
-    cursor: pointer;
+    left: 0;
 
+    height: 40px;
+    margin-left: 0;
+
+    cursor: pointer;
+    transition: 1s;
+
+    opacity: .5;
+    border-radius: 5px;
+
+    fill: #b2dfdb;
 }

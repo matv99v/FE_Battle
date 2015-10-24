@@ -1,4 +1,5 @@
-#contact {
+#contact
+{
     padding: 20px 0;
 }
 
@@ -7,7 +8,8 @@
     margin: 20px 0;
 }
 
-.form-group {
+.form-group
+{
     margin-bottom: 20px;
 }
 
@@ -85,6 +87,7 @@ textarea.form-control
     opacity: 0;
 }
 
-.contact__description {
-  text-transform: uppercase;
+.contact__description
+{
+    text-transform: uppercase;
 }
