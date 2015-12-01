@@ -1,6 +1,13 @@
 var gulp = require('gulp');
+var del = require('del');
 
-gulp.task('default', function () {
+var distPath = 'dist';
+
+gulp.task('clean', function () {
+    return del(distPath);
+});
+
+gulp.task('default', ['clean'], function () {
     return gulp.src([
         './*/**',
         '!font-awesome/**/*',
@@ -9,5 +16,5 @@ gulp.task('default', function () {
         '!node_modules',
         '!bower_components/**/*',
         '!bower_components'
-    ]).pipe(gulp.dest('dist'));
+    ]).pipe(gulp.dest(distPath));
 });
