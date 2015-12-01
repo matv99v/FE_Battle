@@ -9,7 +9,9 @@ gulp.task('clean', function () {
 
 gulp.task('default', ['clean'], function () {
     return gulp.src([
-        './*/**',
+        './**',
+        '!package.json',
+        '!gulpfile.js',
         '!font-awesome/**/*',
         '!font-awesome',
         '!node_modules/**/*',
