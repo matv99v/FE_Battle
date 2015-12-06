@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var del = require('del');
-var gulpConcatCss = require('gulp-concat-css');
+var gulpMinifyCss = require('gulp-minify-css');
+var rebase = require('gulp-css-url-rebase');
+var concat = require('gulp-concat');
 
 var distPath = 'dist';
 
@@ -8,13 +10,15 @@ gulp.task('clean', function () {
     return del(distPath);
 });
 
-gulp.task('concat-blocks', ['clean'], function () {
+gulp.task('minify-blocks', ['clean'], function () {
     return gulp.src('blocks/**/*.css')
-        .pipe(gulpConcatCss('blocks.min.css'))
-        .pipe(gulp.dest(distPath + '/blocks'))
+        .pipe(rebase())
+        .pipe(concat('blocks.min.css'))
+        .pipe(gulpMinifyCss())
+        .pipe(gulp.dest(distPath))
 });
 
-gulp.task('default', ['clean', 'concat-blocks'], function () {
+gulp.task('default', ['clean', 'minify-blocks'], function () {
     return gulp.src([
         './**',
         '!package.json',
