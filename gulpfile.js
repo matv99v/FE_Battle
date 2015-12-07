@@ -5,6 +5,7 @@ var rebase = require('gulp-css-url-rebase');
 var concat = require('gulp-concat');
 var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
+var uglify = require('gulp-uglify');
 
 var distPath = 'dist';
 
@@ -41,7 +42,7 @@ gulp.task('usemin', ['clean'], function() {
   return gulp.src('index.html')
     .pipe(usemin({
       css: [ rebase, 'concat', gulpMinifyCss, rev ],
-      js: []
+      js: [ uglify ]
     }))
     .pipe(gulp.dest(distPath));
 });
