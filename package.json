@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SmartCode2015/FE_Battle#readme",
   "devDependencies": {
+    "critical": "^0.6.0",
     "del": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",

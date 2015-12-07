@@ -10,12 +10,11 @@ var minifyInline = require('gulp-minify-inline');
 var minifyHTML = require('gulp-minify-html');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var critical = require('critical').stream;
 
 var distPath = 'dist';
 
-gulp.task('clean', function () {
-    return del(distPath);
-});
+gulp.task('build', ['copy', 'usemin', 'minify-inline', 'minify-html', 'image-min', 'critical']);
 
 gulp.task('minify-blocks', ['clean'], function () {
     return gulp.src('blocks/**/*.css')
@@ -25,7 +24,7 @@ gulp.task('minify-blocks', ['clean'], function () {
         .pipe(gulp.dest(distPath))
 });
 
-gulp.task('default', ['clean', 'usemin', 'minify-inline', 'minify-html', 'image-min'], function () {
+gulp.task('copy', ['clean'], function () {
     return gulp.src([
         './**/*',
         '!package.json',
@@ -43,6 +42,11 @@ gulp.task('default', ['clean', 'usemin', 'minify-inline', 'minify-html', 'image-
         '!bower_components'
     ]).pipe(gulp.dest(distPath));
 });
+
+gulp.task('clean', function () {
+    return del(distPath);
+});
+
 
 gulp.task('minify-inline', ['minify-html'], function() {
     gulp.src(distPath + '/index.html')
@@ -96,4 +100,10 @@ gulp.task('usemin', ['clean'], function() {
       js: [ uglify ]
     }))
     .pipe(gulp.dest(distPath));
+});
+
+gulp.task('critical', ['copy'], function () {
+    return gulp.src(distPath + '/index.html')
+        .pipe(critical({base: distPath, inline: true}))
+        .pipe(gulp.dest(distPath));
 });
