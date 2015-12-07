@@ -7,6 +7,7 @@ var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
 var uglify = require('gulp-uglify');
 var minifyInline = require('gulp-minify-inline');
+var minifyHTML = require('gulp-minify-html');
 
 var distPath = 'dist';
 
@@ -22,7 +23,7 @@ gulp.task('minify-blocks', ['clean'], function () {
         .pipe(gulp.dest(distPath))
 });
 
-gulp.task('default', ['clean', 'usemin', 'minify-inline'], function () {
+gulp.task('default', ['clean', 'usemin', 'minify-inline', 'minify-html'], function () {
     return gulp.src([
         './**/*',
         '!package.json',
@@ -39,11 +40,25 @@ gulp.task('default', ['clean', 'usemin', 'minify-inline'], function () {
     ]).pipe(gulp.dest(distPath));
 });
 
-gulp.task('minify-inline', ['usemin'], function() {
+gulp.task('minify-inline', ['minify-html'], function() {
     gulp.src(distPath + '/index.html')
         .pipe(minifyInline())
         .pipe(gulp.dest(distPath))
 });
+
+
+
+gulp.task('minify-html', ['usemin'], function() {
+    var opts = {
+        conditionals: true,
+        spare:true
+    };
+
+    return gulp.src(distPath + '/index.html')
+        .pipe(minifyHTML(opts))
+        .pipe(gulp.dest(distPath));
+});
+
 
 gulp.task('usemin', ['clean'], function() {
   return gulp.src('index.html')
