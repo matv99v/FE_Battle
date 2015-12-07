@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var usemin = require('gulp-usemin');
 var rev = require('gulp-rev');
 var uglify = require('gulp-uglify');
+var minifyInline = require('gulp-minify-inline');
 
 var distPath = 'dist';
 
@@ -21,7 +22,7 @@ gulp.task('minify-blocks', ['clean'], function () {
         .pipe(gulp.dest(distPath))
 });
 
-gulp.task('default', ['clean', 'usemin'], function () {
+gulp.task('default', ['clean', 'usemin', 'minify-inline'], function () {
     return gulp.src([
         './**/*',
         '!package.json',
@@ -36,6 +37,12 @@ gulp.task('default', ['clean', 'usemin'], function () {
         '!bower_components/**/*',
         '!bower_components'
     ]).pipe(gulp.dest(distPath));
+});
+
+gulp.task('minify-inline', ['usemin'], function() {
+    gulp.src(distPath + '/index.html')
+        .pipe(minifyInline())
+        .pipe(gulp.dest(distPath))
 });
 
 gulp.task('usemin', ['clean'], function() {
