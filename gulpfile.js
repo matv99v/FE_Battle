@@ -8,6 +8,8 @@ var rev = require('gulp-rev');
 var uglify = require('gulp-uglify');
 var minifyInline = require('gulp-minify-inline');
 var minifyHTML = require('gulp-minify-html');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 var distPath = 'dist';
 
@@ -23,15 +25,17 @@ gulp.task('minify-blocks', ['clean'], function () {
         .pipe(gulp.dest(distPath))
 });
 
-gulp.task('default', ['clean', 'usemin', 'minify-inline', 'minify-html'], function () {
+gulp.task('default', ['clean', 'usemin', 'minify-inline', 'minify-html', 'image-min'], function () {
     return gulp.src([
         './**/*',
         '!package.json',
         '!gulpfile.js',
         '!index.html',
         '!blocks/**/*.css',
+        '!blocks/**/*.{png,jpg,jpeg}',
         '!css/**/*',
         '!css',
+        '!img/**/*.{png,jpg,jpeg}',
         '!font-awesome/{css,less,scss}/*',
         '!node_modules/**/*',
         '!node_modules',
@@ -57,6 +61,31 @@ gulp.task('minify-html', ['usemin'], function() {
     return gulp.src(distPath + '/index.html')
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest(distPath));
+});
+
+gulp.task('image-min', ['image-min:img', 'image-min:blocks']);
+
+gulp.task('image-min:img', ['clean'], function () {
+    return gulp.src([
+            'img/**/*.{png,jpg,jpeg}'
+        ])
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest(distPath + '/img'));
+});
+
+gulp.task('image-min:blocks', ['clean'], function () {
+
+    return gulp.src([
+            'blocks/**/*.{png,jpg,jpeg}'
+        ])
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest(distPath + '/blocks'));
 });
 
 
