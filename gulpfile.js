@@ -22,13 +22,14 @@ gulp.task('minify-blocks', ['clean'], function () {
 
 gulp.task('default', ['clean', 'usemin'], function () {
     return gulp.src([
-        './**',
+        './**/*',
         '!package.json',
         '!gulpfile.js',
         '!index.html',
         '!blocks/**/*.css',
-        '!font-awesome/**/*',
-        '!font-awesome',
+        '!css/**/*',
+        '!css',
+        '!font-awesome/{css,less,scss}/*',
         '!node_modules/**/*',
         '!node_modules',
         '!bower_components/**/*',
